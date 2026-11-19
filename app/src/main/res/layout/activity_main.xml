@@ -1,1 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0E14"
+    android:fillViewport="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MECHA LOOP UNLOCKER"
+            android:textColor="#00F0FF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Infinix GT 20 Pro (X6871) • Custom RGB &amp; Music Sync"
+            android:textColor="#8A99AD"
+            android:textSize="13sp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Live LED Preview Ring -->
+        <View
+            android:id="@+id/ledPreviewBar"
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            android:background="#00F0FF"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Custom RGB Sliders Card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#151B26"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvHexValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CUSTOM COLOR: #00F0FF"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Red (R)"
+                android:textColor="#FF4D6D"
+                android:textSize="12sp" />
+            <SeekBar
+                android:id="@+id/seekRed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="0"
+                android:progressTint="#FF4D6D"
+                android:thumbTint="#FF4D6D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green (G)"
+                android:textColor="#00F5D4"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+            <SeekBar
+                android:id="@+id/seekGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="240"
+                android:progressTint="#00F5D4"
+                android:thumbTint="#00F5D4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Blue (B)"
+                android:textColor="#00BBF9"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+            <SeekBar
+                android:id="@+id/seekBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="255"
+                android:progressTint="#00BBF9"
+                android:thumbTint="#00BBF9" />
+
+            <Button
+                android:id="@+id/btnApplyColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#00F0FF"
+                android:text="APPLY &amp; UNLOCK MECHA LED"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Music Sync (YouTube Morphe / YT Music / System Audio) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#151B26"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MUSIC START AUTO-SYNC (YOUTUBE MORPHE)"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvSyncStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Idle (Waiting for music playback)"
+                android:textColor="#8A99AD"
+                android:textSize="12sp"
+                android:layout_marginBottom="12dp" />
+
+            <Switch
+                android:id="@+id/switchAutoMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Auto-trigger Mecha Loop when music starts"
+                android:textColor="#E2E8F0"
+                android:checked="true"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnToggleVisualizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#7B2CBF"
+                android:text="START LIVE BEAT PULSE NOW"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Hardware / Permission Tools -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#151B26"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PERMISSIONS &amp; HARDWARE PROBE"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:id="@+id/btnGrantNotifAccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#232D3F"
+                android:text="1. Enable Media/YouTube Listener"
+                android:textColor="#00F0FF"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnOpenXosMecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#232D3F"
+                android:text="2. Launch Hidden XOS Mecha Activity"
+                android:textColor="#00F5D4"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvProbeLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0B0E14"
+                android:padding="10dp"
+                android:text="Hardware log ready..."
+                android:textColor="#00F5D4"
+                android:fontFamily="monospace"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
